@@ -31,10 +31,16 @@ function Logo({ compact = false }: { compact?: boolean }) {
 function Reveal({ children, className = '' }: { children: ReactNode; className?: string }) { return <div className={`reveal ${className}`}>{children}</div> }
 
 function App() {
+  const [showSplash, setShowSplash] = useState(true)
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const bookingUrl = import.meta.env.VITE_ACUITY_BOOKING_URL as string | undefined
+  useEffect(() => {
+    document.body.style.overflow = showSplash ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [showSplash])
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 22)
     window.addEventListener('scroll', onScroll, { passive: true })
@@ -44,6 +50,7 @@ function App() {
   }, [])
   const bookingProps = bookingUrl ? { href: bookingUrl, target: '_blank', rel: 'noreferrer' } : { href: '#booking' }
   return <div className="site-shell">
+    {showSplash && <div className="demo-splash" role="dialog" aria-modal="true" aria-labelledby="demo-title"><div className="demo-splash__mark"><Logo /></div><div className="demo-splash__content"><p className="eyebrow">Private Website Preview</p><h2 id="demo-title">Reign Wellness<br /><em>Homepage Demo</em></h2><p className="demo-splash__description">A premium mobile IV hydration and wellness concept created to explore the Reign experience, visual direction, and client-facing homepage flow.</p><p className="demo-splash__credit">Site demo created by <strong>Hakeem Kushimo</strong></p><button className="button button--primary demo-splash__button" autoFocus onClick={() => setShowSplash(false)}>Enter Demo <MoveRight size={17} /></button></div><span className="demo-splash__footer">Reign Wellness · Initial Concept</span></div>}
     <div className="announcement"><span>Luxury wellness, delivered to your door.</span><a href="#treatments">Explore Treatments <ArrowUpRight size={13} /></a></div>
     <header className={`site-header ${scrolled ? 'site-header--scrolled' : ''}`}><div className="header-inner"><Logo /><nav className="desktop-nav" aria-label="Primary navigation">{navItems.map(([label, href]) => <a key={label} href={href}>{label}</a>)}</nav><div className="header-actions"><a className="button button--nav" {...bookingProps}>Book Appointment <MoveRight size={16} /></a><button className="menu-toggle" aria-label={menuOpen ? 'Close menu' : 'Open menu'} onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X /> : <Menu />}</button></div></div>{menuOpen && <nav className="mobile-nav" aria-label="Mobile navigation">{navItems.map(([label, href]) => <a key={label} href={href} onClick={() => setMenuOpen(false)}>{label}</a>)}<a className="mobile-book" {...bookingProps} onClick={() => setMenuOpen(false)}>Book Appointment <MoveRight size={16} /></a></nav>}</header>
     <main>
