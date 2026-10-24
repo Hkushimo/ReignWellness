@@ -13,7 +13,7 @@ The production build is created with `npm run build` and can be previewed with `
 
 ## Content and configuration
 
-- The client-provided logo reference is stored at `public/assets/reign-logo.jpg`; the inspiration board is stored for reference at `public/assets/inspiration-board.jpg` and is not displayed on the page.
+- The cleaned transparent client logo is stored at `public/assets/reign-logo.png`; the inspiration board is stored for reference at `public/assets/inspiration-board.jpg` and is not displayed on the page.
 - Set `VITE_ACUITY_BOOKING_URL` in a local `.env` file when the final Acuity scheduling link is available. Without it, the booking panel intentionally shows a “Booking coming soon” demo state.
 - Replace the Unsplash image URLs in `src/App.tsx` with approved, locally stored/licensed image assets before production launch. The current remote images are editorial placeholders for this concept demo.
 

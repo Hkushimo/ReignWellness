@@ -25,7 +25,7 @@ const faqs = [
 
 function Logo({ compact = false }: { compact?: boolean }) {
   const [failed, setFailed] = useState(false)
-  const logoPath = `${import.meta.env.BASE_URL}assets/reign-logo.jpg`
+  const logoPath = `${import.meta.env.BASE_URL}assets/reign-logo.png`
   return failed ? <a className={`logo-fallback ${compact ? 'logo-fallback--compact' : ''}`} href="#home" aria-label="Reign Wellness home"><span>REIGN</span><small>WELLNESS</small></a> : <a className="logo-image-wrap" href="#home" aria-label="Reign Wellness home"><img src={logoPath} alt="Reign Wellness" onError={() => setFailed(true)} /></a>
 }
 function Reveal({ children, className = '' }: { children: ReactNode; className?: string }) { return <div className={`reveal ${className}`}>{children}</div> }
