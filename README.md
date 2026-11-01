@@ -1,6 +1,19 @@
 # Reign Wellness
 
-Premium single-page React + Vite prototype for Reign Wellness, a mobile IV hydration and wellness business.
+React + Vite demo for Reign Wellness, a nurse-led mobile IV infusion and vitamin therapy business in Massachusetts.
+
+## New branded experience
+
+The current entry point imports `src/Landing.tsx` and `src/landing.css`. The previous `App.tsx` and `styles.css` are retained as legacy reference, not displayed. The private-preview splash briefing is preserved with the new logo and colors.
+
+- Homepage: featured IVs, four booking steps, both memberships, founder story, 16 service areas, FAQs, and demo booking/inquiry actions.
+- Menu: `#/menu`, with all six infusions, injections, and a separate prescription add-on section.
+- Treatment pages: `#/iv/hydrate`, `#/iv/boost`, `#/iv/perform`, `#/iv/defend`, `#/iv/glow`, `#/iv/reboot`.
+- Content: `src/content.ts`. Approved logo: `public/assets/reign-wordmark.png`. Product images: `public/assets/iv/`. Fluid appearance remains provisional pending clinical confirmation.
+- Copy `.env.example` to `.env` to supply approved HTTPS Jane booking links for each service and membership. `VITE_DEMO_MODE` defaults to true: no booking button opens Jane until explicitly set to false. Public Vite variables must never contain secrets.
+- Instagram is shown only when `VITE_INSTAGRAM_URL` is provided. Inquiry forms, reviews, contact details, clinical policies, and real payment/intake processing are not fabricated.
+- Before launch: obtain client authorization and finalize clinical content, fluid appearance, appointment durations, preparation guidance, privacy/consent/cancellation/membership terms, contact routing, and Jane links. Review the demo `noindex` tag in `index.html`.
+- The build now uses standard `index.html`; `source-index.html` is legacy. The existing deployment workflow publishes pushes to `main`, so the redesign stays on a feature branch until publication is authorized.
 
 ## Local development
 
@@ -13,9 +26,8 @@ The production build is created with `npm run build` and can be previewed with `
 
 ## Content and configuration
 
-- The cleaned transparent client logo is stored at `public/assets/reign-logo.png`; the inspiration board is stored for reference at `public/assets/inspiration-board.jpg` and is not displayed on the page.
-- Set `VITE_ACUITY_BOOKING_URL` in a local `.env` file when the final Acuity scheduling link is available. Without it, the booking panel intentionally shows a “Booking coming soon” demo state.
-- Replace the Unsplash image URLs in `src/App.tsx` with approved, locally stored/licensed image assets before production launch. The current remote images are editorial placeholders for this concept demo.
+- The older logo and inspiration-board files are retained but unused by the new page.
+- The current site uses local product imagery and Jane link configuration. Acuity and Unsplash references in the legacy component do not affect the new experience.
 
 ## GitHub Pages deployment
 
