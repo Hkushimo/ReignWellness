@@ -69,3 +69,12 @@
   .wordmark{width:137px;height:58px}
   .wordmark img{width:171px;left:-18px;top:-15px}
 }
+
+.addon-table{width:100%;border-collapse:collapse;text-align:left;font-size:16px}
+.addon-table caption{text-align:left;font-size:20px;font-weight:550;padding-bottom:20px}
+.addon-table thead th{font-size:14px;color:var(--muted);font-weight:500;border-bottom:1px solid var(--line);padding:12px 0}
+.addon-table tbody th,.addon-table td{padding:20px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.addon-table tbody th{font-weight:550;padding-right:24px}
+.addon-table th span{display:block;font-size:14px;font-weight:400;color:var(--muted);line-height:1.7;margin-top:6px;max-width:650px}
+.addon-table th:last-child,.addon-table td{text-align:right;white-space:nowrap}
+.addon-booking-note{background:var(--blue);padding:20px 24px;border-radius:6px;font-size:16px;margin-top:24px}

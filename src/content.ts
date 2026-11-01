@@ -22,6 +22,7 @@ export const medications = [
 ]
 export const towns = ['North Andover', 'Georgetown', 'Topsfield', 'Lynnfield', 'Methuen', 'Winchester', 'Tewksbury', 'Lexington', 'Haverhill', 'Billerica', 'Lawrence', 'Boxford', 'Andover', 'Newton', 'Lowell', 'Boston']
 export const faqs = [
+  ['How do I select add-ons?', 'Our website lists add-on options and prices for reference. To select add-ons, go to Jane and choose your IV first. Available add-ons appear after you select an IV in Jane. All selections are subject to clinical eligibility and approval.'],
   ['What services does Reign Wellness offer?', 'We offer six signature IV infusions and a selection of vitamin and wellness injections, including NAD+ injections. Clinically approved prescription medication add-ons are listed separately.'],
   ['Where do you provide services?', 'We travel to homes, offices, and other approved locations across Boston, the North Shore, the South Shore, and beyond. If your town is not listed, please inquire about availability. Travel fees may apply.'],
   ['Do I need a medical consultation?', 'You will complete the required health history and screening. A licensed medical provider determines eligibility and authorizes treatment when appropriate. Prescription medication add-ons always require consultation, screening, and prescribing-provider authorization.'],
