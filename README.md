@@ -7,13 +7,14 @@ React + Vite demo for Reign Wellness, a nurse-led mobile IV infusion and vitamin
 The current entry point imports `src/Landing.tsx` and `src/landing.css`. The previous `App.tsx` and `styles.css` are retained as legacy reference, not displayed. The private-preview splash briefing is preserved with the new logo and colors.
 
 - Homepage: featured IVs, four booking steps, both memberships, founder story, 16 service areas, FAQs, and demo booking/inquiry actions.
-- Menu: `#/menu`, with all six infusions, injections, and a separate prescription add-on section.
+- IV menu: `#/menu`, with all six infusions.
+- Vitamin Injections: `#/injections`, with seven vitamin price options, a prescription medication add-on section, and IV-first booking guidance. Both categories are available through Services navigation.
 - Treatment pages: `#/iv/hydrate`, `#/iv/boost`, `#/iv/perform`, `#/iv/defend`, `#/iv/glow`, `#/iv/reboot`.
-- Content: `src/content.ts`. Approved logo: `public/assets/reign-wordmark.png`. Product images: `public/assets/iv/`. Fluid appearance remains provisional pending clinical confirmation.
+- Content: `src/content.ts`. Current logo direction (pending client approval): `public/assets/reign-water-blue.png` for light surfaces and `public/assets/reign-water-white.png` for dark surfaces. Both are static transparent artwork. Product images: `public/assets/iv/`. Fluid appearance remains provisional pending clinical confirmation.
 - Copy `.env.example` to `.env` to supply approved HTTPS Jane booking links for each service and membership. `VITE_DEMO_MODE` defaults to true: no booking button opens Jane until explicitly set to false. Public Vite variables must never contain secrets.
 - Instagram is shown only when `VITE_INSTAGRAM_URL` is provided. Inquiry forms, reviews, contact details, clinical policies, and real payment/intake processing are not fabricated.
 - Before launch: obtain client authorization and finalize clinical content, fluid appearance, appointment durations, preparation guidance, privacy/consent/cancellation/membership terms, contact routing, and Jane links. Review the demo `noindex` tag in `index.html`.
-- The build now uses standard `index.html`; `source-index.html` is legacy. The existing deployment workflow publishes pushes to `main`, so the redesign stays on a feature branch until publication is authorized.
+- The build now uses standard `index.html`; `source-index.html` is legacy. The current development preview is on `main`. GitHub Pages uses GitHub Actions to build and publish `dist`; do not switch Pages to publishing the raw branch.
 
 ## Local development
 

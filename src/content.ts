@@ -8,7 +8,7 @@ export const treatments = [
 ]
 export const injections = [
   { name: 'Vitamin B12', price: 40, key: 'b12', copy: 'Supports normal energy metabolism, red blood cell formation, and nervous system function.' },
-  { name: 'Vitamin D3', price: 45, key: 'd3', copy: 'Supports bone health, muscle function, and normal immune function.' },
+  { name: 'Vitamin D', price: 45, key: 'd3', copy: 'Supports bone health, muscle function, and normal immune function.' },
   { name: 'Lipolean', price: 50, key: 'lipolean', copy: 'A combination of lipotropic nutrients commonly marketed for metabolic wellness support.' },
   { name: 'Tri-Immune', price: 45, key: 'tri_immune', copy: 'A combination of nutrients intended to support normal immune function.' },
   { name: 'Glutathione', price: 45, key: 'glutathione', copy: 'An antioxidant involved in the body’s normal cellular processes.' },
@@ -23,7 +23,7 @@ export const medications = [
 export const towns = ['North Andover', 'Georgetown', 'Topsfield', 'Lynnfield', 'Methuen', 'Winchester', 'Tewksbury', 'Lexington', 'Haverhill', 'Billerica', 'Lawrence', 'Boxford', 'Andover', 'Newton', 'Lowell', 'Boston']
 export const faqs = [
   ['How do I select add-ons?', 'Our website lists add-on options and prices for reference. To select add-ons, go to Jane and choose your IV first. Available add-ons appear after you select an IV in Jane. All selections are subject to clinical eligibility and approval.'],
-  ['What services does Reign Wellness offer?', 'We offer six signature IV infusions and a selection of vitamin and wellness injections, including NAD+ injections. Clinically approved prescription medication add-ons are listed separately.'],
+  ['What services does Reign Wellness offer?', 'We offer six signature IV infusions with optional vitamin add-ons, including NAD+. Vitamins and medication add-ons are available only with an IV infusion and cannot be booked individually. Administration and eligibility are determined by our clinical team.'],
   ['Where do you provide services?', 'We travel to homes, offices, and other approved locations across Boston, the North Shore, the South Shore, and beyond. If your town is not listed, please inquire about availability. Travel fees may apply.'],
   ['Do I need a medical consultation?', 'You will complete the required health history and screening. A licensed medical provider determines eligibility and authorizes treatment when appropriate. Prescription medication add-ons always require consultation, screening, and prescribing-provider authorization.'],
   ['How do the memberships work?', 'Reign Essentials is $190/month for one IV infusion of choice plus member discounts. Reign Elite is $360/month for two infusions, a complimentary B12 injection, and member discounts. Both have a three-month minimum commitment, followed by month-to-month membership. Additional terms will be finalized before launch.'],
