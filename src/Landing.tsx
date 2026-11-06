@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState, type CSSProperties } from 'react'
 import { ArrowUpRight, ArrowRight, Check, ChevronDown, Menu, X, MapPin, Heart, ShieldCheck, ArrowLeft } from 'lucide-react'
 import { treatments, injections, medications, towns, faqs } from './content'
+import { developmentMilestones } from './progress'
 
 const asset = (name: string) => `${import.meta.env.BASE_URL}assets/${name}`
+const readyMilestones = developmentMilestones.filter(item => item.ready).length
 const demoMode = import.meta.env.VITE_DEMO_MODE !== 'false'
 const nav = [['Our menu', '#/menu'], ['How it works', '#how-it-works'], ['Memberships', '#memberships'], ['Our story', '#about']] as const
 const safeUrl = (value: unknown) => typeof value === 'string' && /^https:\/\//.test(value) ? value : undefined
@@ -48,7 +50,29 @@ function Landing() {
   const inquiry = () => setNotice('Inquiries will open when Reign Wellness launches. The demo does not send or store your contact details. Travel fees and service availability will be confirmed before booking.')
   function leaveSplash() { setShowSplash(false); requestAnimationFrame(() => mainRef.current?.focus({ preventScroll: true })) }
   return <>
-    {showSplash && <div className="demo-splash" role="dialog" aria-modal="true" aria-labelledby="demo-title" onKeyDown={e => { if (e.key === 'Tab') { e.preventDefault(); enterRef.current?.focus() } }}><div className="demo-splash__mark"><Logo light /></div><div className="demo-splash__content"><p className="eyebrow" id="demo-title">Private Website Preview</p><p className="demo-splash__description">A premium mobile IV infusion and vitamin therapy concept created to explore the Reign experience, visual direction, and client-facing homepage flow.</p><div className="demo-splash__details"><div><span>01</span><p><strong>What you’re seeing</strong>A polished visual prototype of the public-facing website.</p></div><div><span>02</span><p><strong>What’s being built</strong>A separate dashboard for managing approved content, treatments, FAQs, availability, and booking links.</p></div><div><span>03</span><p><strong>What changes at launch</strong>Once finalized, the dashboard will connect to this site so updates can flow into the live website. Current buttons and content are demo-only.</p></div></div><p className="demo-splash__credit">Site demo created by <strong>Hakeem Kushimo</strong></p><button ref={enterRef} className="button button-gold" onClick={leaveSplash}>Enter Demo <ArrowRight size={18} /></button></div><span className="demo-splash__footer">Reign Wellness · Private Concept</span></div>}
+    {showSplash && <div className="demo-splash development-splash" role="dialog" aria-modal="true" aria-labelledby="demo-title" aria-describedby="progress-description" onKeyDown={e => { if (e.key === 'Tab') { e.preventDefault(); enterRef.current?.focus() } }}>
+      <div className="demo-splash__mark"><Logo light /></div>
+      <div className="demo-splash__content">
+        <p className="eyebrow">Private development preview</p>
+        <h1 id="demo-title">Your website,<br /><em>taking shape.</em></h1>
+        <p id="progress-description" className="demo-splash__description">Explore what’s built so far and see what’s next. This is a working preview; content and design are still subject to your approval.</p>
+        <div className="development-progress">
+          <div className="development-progress__label"><span id="milestone-label">Preview milestones</span><strong>{readyMilestones} of {developmentMilestones.length} in place</strong></div>
+          <progress aria-labelledby="milestone-label" aria-describedby="milestone-note" value={readyMilestones} max={developmentMilestones.length} />
+          <p id="milestone-note">Milestones shown equally, not a measure of time spent or final approval.</p>
+        </div>
+        <div className="development-columns">
+          {[true, false].map(ready => <section key={String(ready)} aria-label={ready ? 'Available to preview' : 'Still to come'}>
+            <h2><span className={ready ? 'development-dot development-dot--ready' : 'development-dot'} />{ready ? 'Available to preview' : 'Still to come'}</h2>
+            <ul>{developmentMilestones.filter(item => item.ready === ready).map(item => <li key={item.title}><span className="development-item-icon" aria-hidden="true">{ready ? <Check size={16} /> : <ArrowRight size={16} />}</span><div><h3>{item.title}</h3><p>{item.detail}</p></div></li>)}</ul>
+          </section>)}
+        </div>
+        <p className="development-jane"><strong>Booking follows your readiness.</strong> Jane booking and membership links will be connected and tested once supplied and confirmed. The website can launch with booking coming soon.</p>
+        <button ref={enterRef} className="button button-gold" onClick={leaveSplash}>Explore the preview <ArrowRight size={18} /></button>
+        <p className="demo-splash__credit">Designed & developed by <strong>Hakeem Kushimo</strong></p>
+      </div>
+      <span className="demo-splash__footer">Reign Wellness · In development</span>
+    </div>}
     <div inert={showSplash} className="site-shell"><a className="skip-link" href="#main" onClick={event => { event.preventDefault(); mainRef.current?.focus(); mainRef.current?.scrollIntoView() }}>Skip to content</a><div className="announcement"><span><span className="tiny-dot" /> Nurse-led care. Delivered across Massachusetts.</span><span className="demo-label">{demoMode ? 'PRIVATE DEMO' : 'BY APPOINTMENT'}</span></div>
       <header className="site-header"><div className="header-inner"><a href="#/" aria-label="Reign Wellness home"><Logo /></a><nav className="desktop-nav" aria-label="Main navigation">{nav.map(([label, link]) => <a href={link} key={label} aria-current={isMenu && link === '#/menu' ? 'page' : undefined}>{label}</a>)}</nav><div className="header-actions"><button className="button button-dark header-book" onClick={() => book()}>Book an appointment <ArrowUpRight size={16} /></button><button className="menu-toggle" aria-label={menuOpen ? 'Close navigation' : 'Open navigation'} aria-expanded={menuOpen} aria-controls="mobile-menu" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X /> : <Menu />}</button></div></div>{menuOpen && <nav id="mobile-menu" className="mobile-nav" aria-label="Mobile navigation">{nav.map(([label, link]) => <a href={link} key={label} onClick={() => setMenuOpen(false)}>{label}</a>)}<button onClick={() => { setMenuOpen(false); book() }}>Book an appointment <ArrowUpRight size={18} /></button></nav>}</header>
       <main id="main" ref={mainRef} tabIndex={-1}>

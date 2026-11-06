@@ -78,3 +78,36 @@
 .addon-table th span{display:block;font-size:14px;font-weight:400;color:var(--muted);line-height:1.7;margin-top:6px;max-width:650px}
 .addon-table th:last-child,.addon-table td{text-align:right;white-space:nowrap}
 .addon-booking-note{background:var(--blue);padding:20px 24px;border-radius:6px;font-size:16px;margin-top:24px}
+
+/* Development roadmap: content remains reachable on short and narrow screens. */
+.development-splash{justify-content:flex-start;padding:36px 24px;isolation:isolate}
+.development-splash:before,.development-splash:after{position:fixed;z-index:-1}
+.development-splash .demo-splash__mark{flex-shrink:0;margin-bottom:20px}
+.development-splash .demo-splash__content{width:100%;max-width:850px}
+.development-splash h1{font-family:var(--serif);font-size:clamp(42px,6vw,64px);line-height:1.06;margin:0 0 18px}
+.development-splash h1 em{color:#edc66b}
+.development-splash .demo-splash__description{font-size:15px;line-height:1.65;max-width:590px}
+.development-progress{max-width:590px;margin:26px auto;text-align:left}
+.development-progress__label{display:flex;justify-content:space-between;gap:16px;font-size:14px;margin-bottom:10px}
+.development-progress__label strong{color:#edc66b;font-weight:500}
+.development-progress progress{display:block;appearance:none;width:100%;height:8px;border:0;border-radius:20px;overflow:hidden;background:#ffffff20;color:#edc66b}
+.development-progress progress::-webkit-progress-bar{background:#ffffff20;border-radius:20px}
+.development-progress progress::-webkit-progress-value{background:#edc66b;border-radius:20px}
+.development-progress progress::-moz-progress-bar{background:#edc66b;border-radius:20px}
+.development-progress>p{font-size:12px;color:#b9cbd3;margin:9px 0 0;line-height:1.5}
+.development-columns{display:grid;grid-template-columns:1fr 1fr;gap:20px;text-align:left}
+.development-columns section{border:1px solid #93b1c340;border-radius:12px;padding:24px;background:#ffffff04}
+.development-columns h2{display:flex;align-items:center;gap:10px;font:600 15px 'DM Sans',sans-serif;margin:0 0 22px;color:#fff}
+.development-dot{width:8px;height:8px;border:1px solid #edc66b;border-radius:50%;flex-shrink:0}
+.development-dot--ready{background:#edc66b}
+.development-columns ul{list-style:none;padding:0;margin:0;display:grid;gap:20px}
+.development-columns li{display:flex;align-items:flex-start;gap:10px}
+.development-item-icon{color:#edc66b;flex-shrink:0;margin-top:2px}
+.development-columns h3{font:500 14px 'DM Sans',sans-serif;color:#fff;margin:0 0 5px;line-height:1.4}
+.development-columns li p{font-size:13px;line-height:1.6;color:#bdcdd5;margin:0}
+.development-jane{max-width:670px;margin:22px auto;color:#bdcdd5;font-size:13px;line-height:1.7}
+.development-jane strong{color:#fff;font-weight:500}
+.development-splash .demo-splash__credit{margin:18px 0 0;font-size:12px}
+.development-splash .demo-splash__footer{flex-shrink:0;margin-top:24px;font-size:10px}
+.development-splash .button:focus-visible{outline:3px solid #fff;outline-offset:5px}
+@media(max-width:600px){.development-columns{grid-template-columns:1fr;gap:14px}.development-columns section{padding:20px}.development-splash{padding:24px 18px}.development-progress__label{font-size:13px}.development-splash .demo-splash__description{font-size:14px}}
