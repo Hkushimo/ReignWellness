@@ -9,7 +9,7 @@ export function useSiteMotion(root: RefObject<HTMLElement | null>, page: string,
     let observer: IntersectionObserver | undefined
     // Keep hero-art out: parent opacity/translate isolates the bags' multiply blending.
     const targets = Array.from(container.querySelectorAll<HTMLElement>(
-      '.hero-copy > *, .brand-ribbon, .section-heading, .product-card, .care-symbol, .care-grid > div:last-child, .step, .membership-card, .founder-panel, .founder-copy, .area-grid > div, .faq-section > div:first-child, .faq-list details, .final-cta, .menu-intro > *, .detail-header, .detail-image, .detail-copy, .detail-next, .addon-booking-note, .addon-table, .medications, .service-crosslink'
+      '.hero-copy > *, .brand-ribbon, .section-heading, .product-card, .water-sculpture, .care-grid > div:last-child, .step, .membership-card, .founder-panel, .founder-copy, .area-grid > div, .faq-section > div:first-child, .faq-list details, .final-cta, .menu-intro > *, .detail-header, .detail-image, .detail-copy, .detail-next, .addon-booking-note, .addon-table, .medications, .service-crosslink'
     ))
     const clear = () => {
       observer?.disconnect()
