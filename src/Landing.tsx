@@ -14,7 +14,7 @@ const LogoOption = createContext<string>('classic')
 function Logo({ light = false }: { light?: boolean }) {
   const option = useContext(LogoOption)
   if (option !== 'classic') return <span className={`wordmark wordmark--option wordmark--${option} ${light ? 'wordmark--option-light' : ''}`}><img src={asset(option === 'rw' ? 'reign-rw-concept.png' : 'reign-name-concept.png')} alt="Reign Wellness" /></span>
-  return <span className={`wordmark wordmark--classic ${light ? 'wordmark--light' : ''}`} role="img" aria-label="Reign Wellness" style={{ '--classic-logo': `url("${asset('reign-wordmark-transparent.png')}")` } as CSSProperties}><span className="classic-logo-ink" aria-hidden="true" /><span className="classic-logo-drop" aria-hidden="true" /></span>
+  return <span className={`wordmark wordmark--classic ${light ? 'wordmark--light' : ''}`} role="img" aria-label="Reign Wellness" style={{ '--classic-logo': `url("${new URL(asset('reign-wordmark-transparent.png'), document.baseURI).href}")` } as CSSProperties}><span className="classic-logo-ink" aria-hidden="true" /><span className="classic-logo-drop" aria-hidden="true" /></span>
 }
 const serviceLinks = [['IV Infusions', '#/menu'], ['Vitamin Injections', '#/injections']] as const
 function ServicesNav({ current, mobile = false, onNavigate }: { current: string; mobile?: boolean; onNavigate?: () => void }) {
