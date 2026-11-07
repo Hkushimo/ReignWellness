@@ -15,12 +15,12 @@ export const developmentMilestones = [
 export const latestWorkUpdate = {
   date: '2026-11-06',
   dateLabel: 'November 6, 2026',
-  summary: 'Refining the experience, from service browsing to the smallest visual details.',
+  summary: 'A more cohesive product collection and a cleaner, softer homepage presentation.',
   items: [
-    { title: 'Services & membership details', detail: 'Added the separate Vitamin Injections page and Services navigation, clarified add-on booking, and aligned the Essentials B12 discount with the agreement.' },
-    { title: 'Desktop & mobile refinement', detail: 'Improved service-page spacing, moved treatment names and prices above images on phones, aligned catalog links, and refined navigation and keyboard focus.' },
-    { title: 'New visual direction', detail: 'Introduced blue and white water-inspired logo concepts and coordinated the page colors. Branding remains subject to your approval.' },
-    { title: 'Motion & polish', detail: 'Added section reveals, continuous floating IV bags, an animated water sculpture, and refined interactions, with support for reduced-motion preferences.' },
+    { title: 'Six refreshed IV images', detail: 'Created matching clear-label images for Hydrate, Boost, Perform, Defend, Glow, and Reboot, with a small centered logo and treatment names in their coordinating colors. Applied across the homepage, menu, and individual IV pages.' },
+    { title: 'Refined homepage hero', detail: 'Removed the rectangular backgrounds from the featured bags, softened their angles, and replaced the solid backdrop with a subtle blue glow and water rings. Continuous floating motion remains.' },
+    { title: 'Logo & label exploration', detail: 'Restored the original lowercase logo with a glossy blue droplet. Saved alternate logo concepts and a universal physical-label concept with six selection circles for review. Final branding remains subject to approval.' },
+    { title: 'Preserved earlier designs', detail: 'Kept the previous IV image sets and logo options so directions can be compared without losing earlier work.' },
   ],
-  verification: 'Production build checked; key desktop and mobile layouts and navigation reviewed. Final launch testing is still ahead.',
+  verification: 'All six collection images load and the production build passes. Final device testing, content approval, and launch checks are still ahead.',
 }
