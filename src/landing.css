@@ -334,3 +334,36 @@
 @media(max-width:1050px) and (min-width:801px){.hero-bag-back{top:104px}.hero-bag-front{top:65px}.hero-tag{left:0;bottom:32px}}
 @media(max-width:800px){.hero-art{height:360px;max-width:460px}.hero-bag-back{width:65%;left:-2%;top:52px}.hero-bag-front{width:76%;left:27%;top:18px}.hero-halo{width:100%;height:90%;left:0;top:0}.hero-art-caption{left:0;top:0}.hero-tag{left:10px;bottom:8px;font-size:10px;padding:12px 14px}}
 @media(max-width:380px){.hero-art{height:320px}.hero-tag{left:0;bottom:0}}
+
+/* Yellow subtitle uses the original lettering without a dark layer beneath it. */
+.wordmark--classic .classic-logo-ink{clip-path:polygon(0 0,100% 0,100% 100%,51% 100%,51% 73%,0 73%)}
+.wordmark--classic .classic-logo-wellness{position:absolute;width:125%;aspect-ratio:2;left:-13.46%;top:-27.69%;mask-image:var(--classic-logo);mask-size:100% 100%;mask-repeat:no-repeat;-webkit-mask-image:var(--classic-logo);-webkit-mask-size:100% 100%;-webkit-mask-repeat:no-repeat;background:#edb829;clip-path:inset(73% 49% 16% 10%)}
+.wordmark--light .classic-logo-wellness{background:#f4ca49}
+
+/* Selected PNG wordmarks: navy on light surfaces, white on navy surfaces. */
+.wordmark.wordmark--primary{display:inline-block;position:relative;width:180px;height:74px;overflow:visible;margin:0;background:transparent;border-radius:0}
+.wordmark.wordmark--primary img{position:static;display:block;width:100%;height:100%;max-width:100%;object-fit:contain;filter:none;mix-blend-mode:normal}
+.wordmark.wordmark--primary-light{isolation:auto}
+.wordmark.wordmark--primary-light img{mix-blend-mode:lighten}
+.footer-top .wordmark--primary{width:190px;height:78px}
+.development-splash .wordmark--primary{width:230px;height:94px}
+@media(max-width:800px){.wordmark.wordmark--primary{width:156px;height:64px}.footer-top .wordmark--primary{width:180px;height:74px}.development-splash .wordmark--primary{width:210px;height:86px}}
+
+/* Warm yellow repeats the crescent accent while navy carries readable text. */
+:root{--sun:#ffd044;--sun-soft:#fff5cf;--gold:#ffd044}
+.hero-copy .button-dark{background:var(--sun);color:var(--ink)}
+.hero-copy .button-dark:hover{background:#f5c335}
+.header-book svg,.button-dark svg{color:var(--sun)}
+.hero-copy .button-dark svg{color:var(--ink)}
+.section .eyebrow::before,.menu-intro .eyebrow::before{content:'';display:inline-block;width:24px;height:3px;flex-shrink:0;border-radius:2px;background:var(--sun)}
+.hero-tag .tag-icon{background:var(--sun-soft);border-color:#f0d77e;color:var(--ink)}
+.step-number{border-color:#f0d77e;background:var(--sun-soft);color:var(--ink)}
+.membership-card{border-top:3px solid var(--sun)}
+.product-card:hover .product-arrow,.product-card:focus-visible .product-arrow{background:var(--sun);color:var(--ink)}
+.service-categories a[aria-current=page]{box-shadow:inset 0 -3px 0 var(--sun)}
+.faq-list details[open]{border-bottom-color:#e6bc46}
+.faq-list details[open] summary svg{color:#94701a}
+.final-cta{border-top:3px solid var(--sun)}
+.footer-tagline{color:#ffda6b}
+.footer-links a:hover,.footer-links button:hover{color:#ffda6b}
+.desktop-nav a:hover,.desktop-nav a[aria-current]{text-decoration-color:#d4a517;text-decoration-thickness:2px}
