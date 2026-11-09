@@ -367,3 +367,19 @@
 .footer-tagline{color:#ffda6b}
 .footer-links a:hover,.footer-links button:hover{color:#ffda6b}
 .desktop-nav a:hover,.desktop-nav a[aria-current]{text-decoration-color:#d4a517;text-decoration-thickness:2px}
+
+/* Client-selected stacked RW identity. Keep the existing yellow site accents. */
+.wordmark.wordmark--primary{width:116px;height:90px;flex-shrink:0}
+.wordmark.wordmark--primary img{mix-blend-mode:multiply}
+.wordmark.wordmark--primary-light img{mix-blend-mode:lighten}
+.footer-top .wordmark.wordmark--primary{width:190px;height:146px}
+.development-splash .wordmark.wordmark--primary{width:220px;height:170px}
+@media(max-width:800px){
+  .wordmark.wordmark--primary{width:94px;height:73px}
+  .header-inner{min-height:88px}
+  .footer-top .wordmark.wordmark--primary{width:175px;height:135px}
+  .development-splash .wordmark.wordmark--primary{width:190px;height:147px}
+}
+
+/* True-alpha PNGs need no background blending. */
+.wordmark.wordmark--primary img,.wordmark.wordmark--primary-light img{mix-blend-mode:normal}
