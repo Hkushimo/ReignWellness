@@ -13,14 +13,16 @@ export const developmentMilestones = [
 // Publish a new dated summary only when Hakeem requests a splash-screen update.
 // Keep this date fixed between updates; never derive it from the visitor's clock.
 export const latestWorkUpdate = {
-  date: '2026-11-06',
-  dateLabel: 'November 6, 2026',
-  summary: 'A more cohesive product collection and a cleaner, softer homepage presentation.',
+  date: '2026-11-09',
+  dateLabel: 'November 7–9, 2026',
+  summary: 'Recent work focused on refining the brand, creating a consistent IV collection, and carrying the updated colors through the website.',
   items: [
-    { title: 'Six refreshed IV images', detail: 'Created matching clear-label images for Hydrate, Boost, Perform, Defend, Glow, and Reboot, with a small centered logo and treatment names in their coordinating colors. Applied across the homepage, menu, and individual IV pages.' },
-    { title: 'Refined homepage hero', detail: 'Removed the rectangular backgrounds from the featured bags, softened their angles, and replaced the solid backdrop with a subtle blue glow and water rings. Continuous floating motion remains.' },
-    { title: 'Logo & label exploration', detail: 'Restored the original lowercase logo with a glossy blue droplet. Saved alternate logo concepts and a universal physical-label concept with six selection circles for review. Final branding remains subject to approval.' },
-    { title: 'Preserved earlier designs', detail: 'Kept the previous IV image sets and logo options so directions can be compared without losing earlier work.' },
+    { title: 'Client-led logo refinements', detail: 'Explored lowercase, monogram, and uppercase-style directions, and prepared a side-by-side comparison to support the decision. The current preview uses the preferred uppercase-style lettering with a smaller, softer droplet and lighter blues.' },
+    { title: 'Transparent logos for every background', detail: 'Prepared clean transparent versions for light and dark sections, removed background artifacts, and adjusted logo sizing in the desktop and mobile header, footer, and preview splash screen.' },
+    { title: 'Six matching round-label IV images', detail: 'Created a consistent clear, round-label treatment for Hydrate, Boost, Perform, Defend, Glow, and Reboot. Each bag has a small logo and its treatment name in a coordinating color. Earlier image sets are preserved for comparison.' },
+    { title: 'Refreshed collection and floating hero bags', detail: 'Applied the new bag set to the collection and individual treatment pages, with transparent cutouts for the animated homepage hero. The bags currently carry the RW monogram; matching them to the latest wordmark is still pending.' },
+    { title: 'Yellow accents throughout the website', detail: 'Added restrained yellow touches to the main homepage button, section markers, booking arrows, step indicators, membership cards, and selected navigation details while retaining the blue foundation.' },
+    { title: 'Published preview updates', detail: 'Built and published the recent design updates through GitHub Pages so they can be reviewed on the shared preview. Previous logo versions and image sets remain saved.' },
   ],
-  verification: 'All six collection images load and the production build passes. Final device testing, content approval, and launch checks are still ahead.',
+  verification: 'Production builds and recent deployments passed. Final brand and content approval, device and link testing, Jane readiness, launch setup, and handover remain pending. This preview is not the public launch.',
 }
