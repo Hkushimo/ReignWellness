@@ -11,7 +11,7 @@ const demoMode = import.meta.env.VITE_DEMO_MODE !== 'false'
 const nav = [['How it works', '#how-it-works'], ['Memberships', '#memberships'], ['Our story', '#about']] as const
 const safeUrl = (value: unknown) => typeof value === 'string' && /^https:\/\//.test(value) ? value : undefined
 function Logo({ light = false }: { light?: boolean }) {
-  return <span className={`wordmark wordmark--primary ${light ? 'wordmark--primary-light' : ''}`}><img src={asset(light ? 'reign-soft-drop-light.png' : 'reign-soft-drop-navy.png')} alt="Reign Wellness" /></span>
+  return <span className={`wordmark wordmark--primary ${light ? 'wordmark--primary-light' : ''}`}><img src={asset(light ? 'reign-selected-wordmark-light.png' : 'reign-selected-wordmark-navy.png')} alt="Reign Wellness" /></span>
 }const serviceLinks = [['IV Infusions', '#/menu'], ['Vitamin Injections', '#/injections']] as const
 function ServicesNav({ current, mobile = false, onNavigate }: { current: string; mobile?: boolean; onNavigate?: () => void }) {
   const disclosureRef = useRef<HTMLDetailsElement>(null)
