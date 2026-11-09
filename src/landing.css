@@ -383,3 +383,12 @@
 
 /* True-alpha PNGs need no background blending. */
 .wordmark.wordmark--primary img,.wordmark.wordmark--primary-light img{mix-blend-mode:normal}
+/* Client-selected horizontal REIGN, wave and droplet logo. */
+.wordmark.wordmark--primary{width:170px;height:90px}
+.footer-top .wordmark.wordmark--primary{width:220px;height:117px}
+.development-splash .wordmark.wordmark--primary{width:250px;height:133px}
+@media(max-width:800px){
+  .wordmark.wordmark--primary{width:145px;height:77px}
+  .footer-top .wordmark.wordmark--primary{width:200px;height:106px}
+  .development-splash .wordmark.wordmark--primary{width:220px;height:117px}
+}
