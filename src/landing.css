@@ -401,3 +401,12 @@
   .footer-top .wordmark.wordmark--primary{width:200px;height:62px}
   .development-splash .wordmark.wordmark--primary{width:220px;height:68px}
 }
+/* Soft-blue client wordmark with a restrained droplet. */
+.wordmark.wordmark--primary{width:190px;height:72px}
+.footer-top .wordmark.wordmark--primary{width:230px;height:87px}
+.development-splash .wordmark.wordmark--primary{width:260px;height:98px}
+@media(max-width:800px){
+  .wordmark.wordmark--primary{width:160px;height:61px}
+  .footer-top .wordmark.wordmark--primary{width:210px;height:79px}
+  .development-splash .wordmark.wordmark--primary{width:230px;height:87px}
+}
