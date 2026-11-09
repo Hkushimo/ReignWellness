@@ -392,3 +392,12 @@
   .footer-top .wordmark.wordmark--primary{width:200px;height:106px}
   .development-splash .wordmark.wordmark--primary{width:220px;height:117px}
 }
+/* Simplified text-only identity with transparent backgrounds. */
+.wordmark.wordmark--primary{width:180px;height:56px}
+.footer-top .wordmark.wordmark--primary{width:220px;height:68px}
+.development-splash .wordmark.wordmark--primary{width:250px;height:77px}
+@media(max-width:800px){
+  .wordmark.wordmark--primary{width:150px;height:46px}
+  .footer-top .wordmark.wordmark--primary{width:200px;height:62px}
+  .development-splash .wordmark.wordmark--primary{width:220px;height:68px}
+}
