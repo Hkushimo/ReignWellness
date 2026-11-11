@@ -2,7 +2,7 @@
 export const developmentMilestones = [
   { title: 'Homepage foundation', detail: 'Featured IVs, booking steps, founder story, service areas and FAQs.', ready: true },
   { title: 'IV collection', detail: 'Six infusions with prices, individual detail pages and branded bag images.', ready: true },
-  { title: 'Brand direction', detail: 'Finished logos are in the preview. Final approval of the overall visual direction is pending.', ready: false },
+  { title: 'Brand direction', detail: 'Brand direction is approved. The finished wordmark, RW monogram, and colors are applied across the preview.', ready: true },
   { title: 'Memberships & pricing', detail: 'Both membership cards and vitamin and medication price tables are in the preview.', ready: true },
   { title: 'Services organization', detail: 'Separate IV and Vitamin Injections pages, Services navigation and IV-first add-on guidance.', ready: true },
   { title: 'Content & design approval', detail: 'Client review of treatment copy, imagery, policies and membership terms before launch.', ready: false },
@@ -21,5 +21,5 @@ export const latestWorkUpdate = {
     { title: 'Updated IV bag labels', detail: 'Applied the finished RW monogram to the clear round labels for all six infusions. Each bag keeps its color-coded treatment name. The updated artwork appears in the homepage hero, IV menu, and individual infusion pages.' },
     { title: 'Print logo package', detail: 'Replaced the earlier print exports with the finished wordmark and RW monogram in full-color and white versions. The package includes transparent PNGs and matching SVGs.' },
   ],
-  verification: 'The updated branding and IV artwork passed the production build and deployed to the shared preview. Final content and design approval, booking readiness, and launch checks are still pending.',
+  verification: 'The updated branding and IV artwork passed the production build and deployed to the shared preview. Brand direction is approved. Final site and content review, booking readiness, and launch checks are still pending.',
 }
