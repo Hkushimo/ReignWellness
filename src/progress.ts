@@ -13,13 +13,13 @@ export const developmentMilestones = [
 // Publish a new dated summary only when Hakeem requests a splash-screen update.
 // Keep this date fixed between updates; never derive it from the visitor's clock.
 export const latestWorkUpdate = {
-  date: '2026-11-10',
-  dateLabel: 'November 10, 2026',
-  summary: 'The finished Reign Wellness logos and matching IV bag artwork are now in the website preview.',
+  date: '2026-11-11',
+  dateLabel: 'November 11, 2026',
+  summary: 'The brand is approved, the first four Instagram posts are ready for review, and custom domain setup is underway.',
   items: [
-    { title: 'Finished website branding', detail: 'Applied the finished wordmark to the header, footer, and splash screen, using the full-color version on light backgrounds and the white version on dark backgrounds. The finished RW monogram is now the browser tab icon.' },
-    { title: 'Updated IV bag labels', detail: 'Applied the finished RW monogram to the clear round labels for all six infusions. Each bag keeps its color-coded treatment name. The updated artwork appears in the homepage hero, IV menu, and individual infusion pages.' },
-    { title: 'Print logo package', detail: 'Replaced the earlier print exports with the finished wordmark and RW monogram in full-color and white versions. The package includes transparent PNGs and matching SVGs.' },
+    { title: 'Approved brand across the preview', detail: 'The finished Reign Wellness wordmark and RW monogram are in use across the website and all six IV bag designs. The print package includes transparent PNGs and matching SVGs.' },
+    { title: 'Four Instagram posts prepared', detail: 'Created a wellness lifestyle series featuring Hydrate, Perform, and Glow. Each graphic has a matching caption and alt text ready for review.' },
+    { title: 'Cloudflare hosting setup', detail: 'Connected the GitHub repository to Cloudflare and began configuring the Reign Wellness domain. The custom domain is still being verified.' },
   ],
-  verification: 'The updated branding and IV artwork passed the production build and deployed to the shared preview. Brand direction is approved. Final site and content review, booking readiness, and launch checks are still pending.',
+  verification: 'Final site and content review, custom domain verification, booking readiness, and launch checks are still pending.',
 }
